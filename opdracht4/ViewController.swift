@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController,ClockHelperDelegate {
 
     
     @IBOutlet var hetis_WORD: [UILabel]!
@@ -26,6 +26,8 @@ class ViewController: UIViewController {
     
     @IBOutlet var half: [UILabel]!
     
+    
+    
     //uren
     @IBOutlet var een_UUR: [UILabel]!
     @IBOutlet var twee_UUR: [UILabel]!
@@ -40,12 +42,50 @@ class ViewController: UIViewController {
     @IBOutlet var elf_UUR: [UILabel]!
     @IBOutlet var twaalf_UUR: [UILabel]!
     
-    func updateTime(){
+    var words:[Words:[UILabel]] = [:]
+    var letters:[UILabel]=[]
+    func initWords(){
+        words=[
+            Words.VIJFM:vijf_MIN!,
+            Words.TIENM:tien_MIN!,
+            Words.KWART:kwart!,
+            Words.HALF:half!,
+            Words.VOOR:voor!,
+            Words.OVER:over!,
+            Words(rawValue: 1)!:een_UUR!,
+            Words(rawValue: 2)!:twee_UUR!,
+            Words(rawValue: 3)!:drie_UUR!,
+            Words(rawValue: 4)!:vier_UUR!,
+            Words(rawValue: 5)!:vijf_UUR!,
+            Words(rawValue: 6)!:zes_UUR!,
+            Words(rawValue: 7)!:zeven_UUR!,
+            Words(rawValue: 8)!:acht_UUR!,
+            Words(rawValue: 9)!:negen_UUR!,
+            Words(rawValue: 10)!:tien_UUR!,
+            Words(rawValue: 11)!:elf_UUR!,
+            Words(rawValue: 12)!:twaalf_UUR!
+        ]
+    }
+    
+    func updateClock(_ result: [Words]){
+        var letters:[UILabel]=[]
+        for l in letters{
+            l.textColor=UIColor.white
+        }
+        letters.append(contentsOf: hetis_WORD!)
+        for w in result{
+            letters.append(contentsOf: words[w]! as [UILabel])
+        }
+        for l in letters{
+            l.textColor=UIColor.red
+        }
         
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        ClockHelper(delegate:self)
+        initWords()
         // Do any additional setup after loading the view, typically from a nib.
     }
 
