@@ -13,6 +13,8 @@
 		3F062EB6216F2BE100CDF2DE /* opdracht4.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 3F062EB4216F2BE100CDF2DE /* opdracht4.xcdatamodeld */; };
 		3F062EB8216F2BE300CDF2DE /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3F062EB7216F2BE300CDF2DE /* Assets.xcassets */; };
 		3F062EBB216F2BE300CDF2DE /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3F062EB9216F2BE300CDF2DE /* LaunchScreen.storyboard */; };
+		3F0ABDF02178666800D11F9C /* ClockHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0ABDEF2178666800D11F9C /* ClockHelper.swift */; };
+		3F0ABDF22178710000D11F9C /* WordEnum.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3F0ABDF12178710000D11F9C /* WordEnum.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,8 @@
 		3F062EB7216F2BE300CDF2DE /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3F062EBA216F2BE300CDF2DE /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3F062EBC216F2BE300CDF2DE /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3F0ABDEF2178666800D11F9C /* ClockHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ClockHelper.swift; sourceTree = "<group>"; };
+		3F0ABDF12178710000D11F9C /* WordEnum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordEnum.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +67,8 @@
 				3F062EB9216F2BE300CDF2DE /* LaunchScreen.storyboard */,
 				3F062EBC216F2BE300CDF2DE /* Info.plist */,
 				3F062EB4216F2BE100CDF2DE /* opdracht4.xcdatamodeld */,
+				3F0ABDEF2178666800D11F9C /* ClockHelper.swift */,
+				3F0ABDF12178710000D11F9C /* WordEnum.swift */,
 			);
 			path = opdracht4;
 			sourceTree = "<group>";
@@ -138,9 +144,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3F0ABDF02178666800D11F9C /* ClockHelper.swift in Sources */,
 				3F062EB6216F2BE100CDF2DE /* opdracht4.xcdatamodeld in Sources */,
 				3F062EB0216F2BE100CDF2DE /* ViewController.swift in Sources */,
 				3F062EAE216F2BE100CDF2DE /* AppDelegate.swift in Sources */,
+				3F0ABDF22178710000D11F9C /* WordEnum.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

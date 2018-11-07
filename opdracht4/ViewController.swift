@@ -43,7 +43,7 @@ class ViewController: UIViewController,ClockHelperDelegate {
     @IBOutlet var twaalf_UUR: [UILabel]!
     
     var words:[Words:[UILabel]] = [:]
-    var letters:[UILabel]=[]
+   
     func initWords(){
         words=[
             Words.VIJFM:vijf_MIN!,
@@ -69,9 +69,12 @@ class ViewController: UIViewController,ClockHelperDelegate {
     
     func updateClock(_ result: [Words]){
         var letters:[UILabel]=[]
-        for l in letters{
-            l.textColor=UIColor.white
+        for letter in words.values{
+            for l in letter{
+                l.textColor=UIColor.white
+            }
         }
+        letters.removeAll()
         letters.append(contentsOf: hetis_WORD!)
         for w in result{
             letters.append(contentsOf: words[w]! as [UILabel])
